@@ -8,10 +8,10 @@
 
   $.get(url, (response) => {
     console.log(response);
-    var cardClone = $(".cardTemplate").clone();
+    var cardClone = $(".demo-card").clone();
     // cardClone.find(".mdc-card__media-content").text(v.name);
     cardClone.css("background-image", "url("+response["url"]+")");
-    cardClone.removeClass("cardTemplate");
+    cardClone.removeClass("demo-card");
     $("#apodContent").append(cardClone);
   })
 

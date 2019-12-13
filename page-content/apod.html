@@ -9,10 +9,8 @@
   $.get(apodurl, (response) => {
     console.log(response);
     var cardClone = $(".demo-card").clone();
-    // cardClone.find(".mdc-card__media-content").text(v.name);
     console.log(response["url"]);
     $("#cardImg").css("background-image", "url("+response["url"]+")");
-    // cardClone.css("background-image", "url("+response["url"]+")");
     $("#HDbtn").on("click",function(){
       console.log("View HD has been clicked yo!");
       var newWindowURL = response["hdurl"];
@@ -22,11 +20,10 @@
       console.log("View HD has been clicked yo!");
       var newWindowURL = response["hdurl"];
       window.open(newWindowURL);
-    });
-    
+    });    
     cardClone.removeClass("demo-card");
     $("#apodContent").append(cardClone);
-  })
+  });
 
 
 

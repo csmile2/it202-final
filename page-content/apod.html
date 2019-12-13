@@ -8,6 +8,11 @@
 
   $.get(url, (response) => {
     console.log(response);
+    var cardClone = $(".cardTemplate").clone();
+    // cardClone.find(".mdc-card__media-content").text(v.name);
+    cardClone.removeClass("cardTemplate");
+
+
   })
 
 

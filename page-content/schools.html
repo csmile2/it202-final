@@ -54,6 +54,8 @@
 
   let getSchools = () => {
     let url = endpoint + "$limit=" + limit;
+    url = url + $("#schoolType").val();
+    console.log(url);
 
     let divider = $("ul#listSchools .mdc-list-divider.template");
 

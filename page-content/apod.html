@@ -10,11 +10,9 @@
     console.log(response);
     var cardClone = $(".cardTemplate").clone();
     // cardClone.find(".mdc-card__media-content").text(v.name);
-    cardClone.removeClass("cardTemplate");
     cardClone.css("background-image", "url("+response["url"]+")");
-
-
-
+    cardClone.removeClass("cardTemplate");
+    $("#apodContent").append(cardClone);
   })
 
 

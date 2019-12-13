@@ -13,7 +13,11 @@
     console.log(response["url"]);
     $("#cardImg").css("background-image", "url("+response["url"]+")");
     // cardClone.css("background-image", "url("+response["url"]+")");
-    
+    $("HDbtn").on("click",function(){
+      console.log("View HD has been clicked yo!");
+      var newWindowURL = response["hdurl"];
+      window.open(newWindowURL);
+    });
     $(".mdc-button__ripple:contains('View HD Image')").on("click", function(){
       console.log("View HD has been clicked yo!");
       var newWindowURL = response["hdurl"];

@@ -53,7 +53,8 @@
 
 
   let getSchools = () => {
-    let url = endpoint + "primary_category="+ $("#schoolType").val() + "$limit=" + limit;
+    let url = endpoint + "primary_category="+ $("#schoolType").val();
+    //  + "$limit=" + limit;
     // url = url + $("#schoolType").val();
     console.log(url);
 

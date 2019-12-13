@@ -12,14 +12,14 @@
     // cardClone.find(".mdc-card__media-content").text(v.name);
     $("#cardImg").css("background-image", "url("+response["url"]+")");
     // cardClone.css("background-image", "url("+response["url"]+")");
-    cardClone.removeClass("demo-card");
-
+    
     $(".mdc-button__ripple:contains(' View HD Image')").on("click",function(){
       console.log("View HD has been clicked yo!");
       var newWindowURL = response["hdurl"];
       window.open(newWindowURL);
     });
-
+    
+    cardClone.removeClass("demo-card");
     $("#apodContent").append(cardClone);
   })
 

@@ -10,13 +10,13 @@
     console.log(response);
     var cardClone = $(".demo-card").clone();
     // cardClone.find(".mdc-card__media-content").text(v.name);
-    $(".demo-card__media").css("background-image", "url("+response["url"]+")");
+    $(".mdc-card__media mdc-card__media--16-9").css("background-image", "url("+response["url"]+")");
     // cardClone.css("background-image", "url("+response["url"]+")");
     cardClone.removeClass("demo-card");
 
     $(".mdc-button__ripple:contains(' View HD Image')").on("click",function(){
       console.log("View HD has been clicked yo!");
-      var newWindowURL = response["url"];
+      var newWindowURL = response["hdurl"];
       window.open(newWindowURL);
     });
 
